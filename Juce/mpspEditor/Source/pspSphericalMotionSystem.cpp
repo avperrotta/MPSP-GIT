@@ -405,8 +405,8 @@ void pspSphericalMotionTrajectorySystem::saveXml(File xml){
         XmlElement* ptElement = new XmlElement("timedPt");
         ptElement->setAttribute("pt", i+1);
         ptElement->setAttribute("r", (*pts)[i].r);
-        ptElement->setAttribute("theta", (*pts)[i].theta);
-        ptElement->setAttribute("phi", (*pts)[i].phi);
+        ptElement->setAttribute("vTheta", (*pts)[i].vTheta);
+        ptElement->setAttribute("vPhi", (*pts)[i].vPhi);
         ptElement->setAttribute("cx", (*pts)[i].cx);
         ptElement->setAttribute("cy", (*pts)[i].cy);
         ptElement->setAttribute("cz", (*pts)[i].cz);
@@ -448,15 +448,15 @@ void pspSphericalMotionTrajectorySystem::loadXml(File xml){
                     if(npts > 0){
                         pts->clear();
                         for(int i=0; i<npts; i++){
-                            double r, theta, phi, cx, cy, cz, time;
+                            double r, vTheta, vPhi, cx, cy, cz, time;
                             r = ptsElement->getChildElement(i)->getDoubleAttribute("r");
-                            theta = ptsElement->getChildElement(i)->getDoubleAttribute("theta");
-                            phi = ptsElement->getChildElement(i)->getDoubleAttribute("phi");
+                            vTheta = ptsElement->getChildElement(i)->getDoubleAttribute("vTheta");
+                            vPhi = ptsElement->getChildElement(i)->getDoubleAttribute("vPhi");
                             cx = ptsElement->getChildElement(i)->getDoubleAttribute("cx");
                             cy = ptsElement->getChildElement(i)->getDoubleAttribute("cy");
                             cz = ptsElement->getChildElement(i)->getDoubleAttribute("cz");
                             time = ptsElement->getChildElement(i)->getDoubleAttribute("time");
-                            pts->push_back(timedSphericalMotionState(0.5, 180., 0., 0., 0., 0., 1., 0., 1000.));
+                            pts->push_back(timedSphericalMotionState(r, 0., 0., cx, cy, cz, vTheta, vPhi, time));
                         }
                         static_cast<pspSphericalMotionTrajectorySystemSpecificGUI*>(mySpecificGui)->createWidgets();
                     }
