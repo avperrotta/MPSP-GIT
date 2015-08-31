@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 40.0, 85.0, 759.0, 117.0 ],
+		"rect" : [ 40.0, 85.0, 764.0, 123.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -187,7 +187,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 135.0, 615.0, 145.0, 22.0 ],
 					"style" : "",
-					"text" : "random:1"
+					"text" : "empty"
 				}
 
 			}
@@ -1590,7 +1590,37 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "mpspAudioInputModel.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspTrajectoryParser.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspTrajectoryVoice.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "msToHrsMinsSecsMs.maxpat",
+				"bootpath" : "~/Documents/Max 7/Library/myAbstractions",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

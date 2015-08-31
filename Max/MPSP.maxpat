@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 370.0, 79.0, 1433.0, 887.0 ],
+		"rect" : [ 218.0, 79.0, 1425.0, 780.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,88 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"hidden" : 1,
+					"id" : "obj-7",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "bang", "" ],
+					"patching_rect" : [ 514.0, -61.0, 194.0, 21.0 ],
+					"style" : "",
+					"text" : "sel 0 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"hidden" : 1,
+					"id" : "obj-9",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 601.5, -13.0, 82.0, 21.0 ],
+					"style" : "",
+					"text" : "offset -790 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 11.595187,
+					"hidden" : 1,
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 514.0, -13.0, 58.0, 21.0 ],
+					"style" : "",
+					"text" : "offset 0 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "tab",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 11.0, 28.0, 200.0, 24.0 ],
+					"style" : "",
+					"tabs" : [ "audioFile", "liveInput" ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-5",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "mpspInputsGUIpatcher.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 7.0, 54.0, 779.0, 719.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"args" : [ "mpsp" ],
 					"bgmode" : 0,
 					"border" : 1,
@@ -51,7 +133,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 1078.0, 393.0, 335.0, 228.0 ],
+					"patching_rect" : [ 1078.0, 368.0, 335.0, 228.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -576,7 +658,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 831.0, 585.0, 68.0, 22.0 ],
+					"patching_rect" : [ 867.5, 569.0, 68.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -596,7 +678,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 854.5, 400.0, 89.0, 20.0 ],
+					"patching_rect" : [ 891.0, 384.0, 89.0, 20.0 ],
 					"style" : "",
 					"text" : "PLAY / STOP"
 				}
@@ -611,7 +693,7 @@
 					"oncolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 831.0, 430.0, 136.0, 136.0 ],
+					"patching_rect" : [ 867.5, 414.0, 136.0, 136.0 ],
 					"style" : ""
 				}
 
@@ -623,7 +705,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1154.0, 13.0, 154.0, 33.0 ],
+					"patching_rect" : [ 1227.0, 64.0, 154.0, 33.0 ],
 					"style" : "",
 					"text" : "warning !!! save your work before closing !!!!!",
 					"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
@@ -639,7 +721,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1181.0, 48.0, 100.0, 20.0 ],
+					"patching_rect" : [ 1123.0, 70.5, 100.0, 20.0 ],
 					"style" : "",
 					"text" : "close spat editor",
 					"texton" : "close spat editor",
@@ -657,7 +739,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 831.0, 13.0, 209.0, 39.0 ],
+					"patching_rect" : [ 831.0, 57.5, 209.0, 39.0 ],
 					"style" : "",
 					"text" : "OPEN SPAT EDITOR",
 					"texton" : "OPEN SPAT EDITOR"
@@ -666,11 +748,12 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-39",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 829.0, 71.0, 22.0 ],
+					"patching_rect" : [ 1314.0, 672.0, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"allwindowsactive" : 0,
 						"audiosupport" : 1,
@@ -738,29 +821,41 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"patching_rect" : [ 608.0, 10.0, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-21",
 									"linecount" : 10,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 648.0, 182.0, 50.0, 22.0 ],
+									"patching_rect" : [ 648.0, 182.0, 50.0, 143.0 ],
 									"style" : "",
-									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-2015/Max/"
+									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-GIT/Max/"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-20",
-									"linecount" : 9,
+									"linecount" : 8,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 506.0, 79.0, 56.0, 129.0 ],
+									"patching_rect" : [ 506.0, 79.0, 56.0, 116.0 ],
 									"style" : "",
-									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-2015/Max/"
+									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-GIT/Max/"
 								}
 
 							}
@@ -865,7 +960,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 193.0, 241.5, 575.0, 22.0 ],
 									"style" : "",
-									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-2015/"
+									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-GIT/Max/"
 								}
 
 							}
@@ -905,7 +1000,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 107.0, 409.0, 629.0, 35.0 ],
 									"style" : "",
-									"text" : "\"osascript -e 'tell application \\\"/Users/avperrotta/Documents/Projects/MPSP/MPSP-2015/editor/mpspEditor.app\\\"to quit'\""
+									"text" : "\"osascript -e 'tell application \\\"/Users/avperrotta/Documents/Projects/MPSP/MPSP-GIT/Max/editor/mpspEditor.app\\\"to activate'\""
 								}
 
 							}
@@ -951,7 +1046,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 277.0, 186.0, 158.0, 22.0 ],
 									"style" : "",
-									"text" : "MPSP.app"
+									"text" : "MPSP.maxpat"
 								}
 
 							}
@@ -966,7 +1061,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 107.0, 272.5, 575.0, 22.0 ],
 									"style" : "",
-									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-2015/"
+									"text" : "AVP:/Users/avperrotta/Documents/Projects/MPSP/MPSP-GIT/Max/"
 								}
 
 							}
@@ -979,7 +1074,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 218.0, 78.0, 66.0, 22.0 ],
+									"patching_rect" : [ 218.0, 78.0, 87.0, 22.0 ],
 									"style" : "",
 									"text" : "MPSP.app"
 								}
@@ -1217,6 +1312,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-18", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-55", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -1284,7 +1388,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 831.0, 71.0, 118.0, 22.0 ],
+					"patching_rect" : [ 831.0, 79.0, 118.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1295,106 +1399,6 @@
 ,
 					"style" : "",
 					"text" : "p mpspEditorScripts"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 6 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-9",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 601.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 5 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-8",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 482.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 4 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-7",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 363.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 3 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-6",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 244.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 2 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-5",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 125.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
 				}
 
 			}
@@ -1420,11 +1424,12 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 787.0, 101.0, 22.0 ],
+					"patching_rect" : [ 1314.0, 645.0, 101.0, 22.0 ],
 					"style" : "",
 					"text" : "s mpsp.universal"
 				}
@@ -1432,34 +1437,15 @@
 			}
 , 			{
 				"box" : 				{
+					"hidden" : 1,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 746.0, 99.0, 22.0 ],
+					"patching_rect" : [ 1314.0, 612.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "udpreceive 7000"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ 1 ],
-					"bgmode" : 0,
-					"border" : 1,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-2",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "mpspAudioInputView.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 6.0, 6.0, 759.0, 117.0 ],
-					"viewvisibility" : 1
 				}
 
 			}
@@ -1468,8 +1454,17 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
+					"hidden" : 1,
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -1487,7 +1482,7 @@
 					"destination" : [ "obj-38", 1 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 1190.5, 57.5, 939.5, 57.5 ],
+					"midpoints" : [ 1132.5, 69.5, 939.5, 69.5 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -1506,44 +1501,96 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 840.5, 609.0, 816.0, 609.0, 816.0, 426.0, 840.5, 426.0 ],
+					"midpoints" : [ 877.0, 593.0, 852.5, 593.0, 852.5, 410.0, 877.0, 410.0 ],
 					"source" : [ "obj-29", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-7", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
+			"obj-5::obj-1::obj-69" : [ "live.gain~[13]", "live.gain~[1]", 0 ],
+			"obj-5::obj-7::obj-69" : [ "live.gain~[4]", "live.gain~[1]", 0 ],
+			"obj-5::obj-16::obj-69" : [ "live.gain~[8]", "live.gain~[1]", 0 ],
+			"obj-5::obj-12::obj-69" : [ "live.gain~[12]", "live.gain~[1]", 0 ],
+			"obj-5::obj-6::obj-69" : [ "live.gain~[3]", "live.gain~[1]", 0 ],
+			"obj-5::obj-14::obj-69" : [ "live.gain~[10]", "live.gain~[1]", 0 ],
 			"obj-10::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-2::obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
-			"obj-7::obj-69" : [ "live.gain~[4]", "live.gain~[1]", 0 ],
-			"obj-8::obj-69" : [ "live.gain~[3]", "live.gain~[1]", 0 ],
+			"obj-5::obj-3::obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
 			"obj-10::obj-85" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-9::obj-69" : [ "live.gain~[2]", "live.gain~[1]", 0 ],
-			"obj-5::obj-69" : [ "live.gain~[6]", "live.gain~[1]", 0 ],
-			"obj-6::obj-69" : [ "live.gain~[5]", "live.gain~[1]", 0 ]
+			"obj-5::obj-5::obj-69" : [ "live.gain~[2]", "live.gain~[1]", 0 ],
+			"obj-5::obj-15::obj-69" : [ "live.gain~[9]", "live.gain~[1]", 0 ],
+			"obj-5::obj-11::obj-69" : [ "live.gain~[14]", "live.gain~[1]", 0 ],
+			"obj-5::obj-10::obj-69" : [ "live.gain~[16]", "live.gain~[1]", 0 ],
+			"obj-5::obj-9::obj-69" : [ "live.gain~[6]", "live.gain~[1]", 0 ],
+			"obj-5::obj-4::obj-69" : [ "live.gain~[15]", "live.gain~[1]", 0 ],
+			"obj-5::obj-2::obj-69" : [ "live.gain~[7]", "live.gain~[1]", 0 ],
+			"obj-5::obj-8::obj-69" : [ "live.gain~[5]", "live.gain~[1]", 0 ],
+			"obj-5::obj-13::obj-69" : [ "live.gain~[11]", "live.gain~[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "mpspAudioInputView.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
+				"name" : "mpspDynamicDacGUI.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mpspAudioInputModel.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
+				"name" : "mpspDynamicDac~.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mpspTrajectoryParser.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
+				"name" : "mpspEditorShellCmds.js",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspDynamicChannelsRecorder.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mpspTrajectoryVoice.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
+				"name" : "mpspRecorderVoice.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1554,38 +1601,50 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "mpspDynamicDacGUI.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspDynamicDac~.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspEditorShellCmds.js",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspDynamicChannelsRecorder.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspRecorderVoice.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-2015/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "hrsMinsSecsMstoMs.maxpat",
 				"bootpath" : "~/Documents/Max 7/Library/myAbstractions",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspInputsGUIpatcher.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspAudioInputView.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspAudioInputModel.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspTrajectoryParser.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspTrajectoryVoice.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspLiveAudioInputView.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "mpspLiveAudioInputModel.maxpat",
+				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
 				"type" : "JSON",
 				"implicit" : 1
 			}
