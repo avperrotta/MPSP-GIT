@@ -364,6 +364,7 @@ void pspParticleSystemsManager::resetTime(){
 
 void pspParticleSystemsManager::setTransport(String t){
     if(t == "play"){
+        resetTime();
         transport = 1;
     }
     else if(t == "stop"){

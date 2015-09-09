@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 40.0, 85.0, 764.0, 123.0 ],
+		"rect" : [ 368.0, 136.0, 759.0, 117.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -187,7 +187,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 135.0, 615.0, 145.0, 22.0 ],
 					"style" : "",
-					"text" : "empty"
+					"text" : "sphericalMotion:2"
 				}
 
 			}
@@ -208,7 +208,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-67",
-					"items" : "empty",
+					"items" : [ "linear:2", ",", "sphericalMotion:2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -695,9 +695,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 60.0, 188.5, 44.0, 35.0 ],
+					"patching_rect" : [ 60.0, 188.5, 46.0, 35.0 ],
 					"style" : "",
-					"text" : "1036.1"
+					"text" : "5051.813965"
 				}
 
 			}
@@ -804,7 +804,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 6.0, 31.0, 525.0, 22.0 ],
 					"style" : "",
-					"text" : "no file loaded",
+					"text" : "whiteNoise.wav",
 					"textcolor" : [ 0.835941, 0.83802, 0.894216, 1.0 ]
 				}
 
@@ -1113,7 +1113,7 @@
 					"destination" : [ "obj-18", 1 ],
 					"disabled" : 0,
 					"hidden" : 1,
-					"midpoints" : [ 1095.5, 204.0, 426.0, 204.0, 426.0, 165.0, 94.5, 165.0 ],
+					"midpoints" : [ 1095.5, 204.0, 426.0, 204.0, 426.0, 165.0, 96.5, 165.0 ],
 					"source" : [ "obj-21", 2 ]
 				}
 
@@ -1590,37 +1590,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "mpspAudioInputModel.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspTrajectoryParser.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mpspTrajectoryVoice.maxpat",
-				"bootpath" : "~/Documents/Projects/MPSP/MPSP-GIT/Max",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "msToHrsMinsSecsMs.maxpat",
-				"bootpath" : "~/Documents/Max 7/Library/myAbstractions",
-				"type" : "JSON",
-				"implicit" : 1
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }

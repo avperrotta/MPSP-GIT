@@ -56,6 +56,9 @@ public:
     void paint (Graphics& g) override;
     void resized() override;
     bool keyPressed(const KeyPress &key);
+    void mouseDrag(const juce::MouseEvent &event);
+    void mouseMove(const juce::MouseEvent &event);
+    void mouseWheelMove (const MouseEvent &event, const MouseWheelDetails &wheel);
     
     //psp
     pspParticleSystemsManager* getPspManager();
@@ -118,6 +121,10 @@ private:
     
     //System editor
     ScopedPointer<pspSystemEditorGUI> systemEditorGui;
+    
+    //mouse
+    int pMouseX;
+    int pMouseY;
     
     
     void createViewWidgets();

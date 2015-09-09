@@ -466,8 +466,6 @@ void pspSphericalMotionTrajectorySystem::loadXml(File xml){
         }
     }
     
-    
-    
     delete mainElement;
 }
 //=================================================

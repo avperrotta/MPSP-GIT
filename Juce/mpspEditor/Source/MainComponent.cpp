@@ -51,9 +51,9 @@ void MainContentComponent::timerCallback(){
         // get the next message
         ofxOscMessage m;
         oscReceiver.getNextMessage(&m);
-        
         // check for mouse moved message
         if(m.getAddress() == "/mpsp"){
+            cout<<endl<<"got it!";
             if(m.getArgAsString(0) == "transport"){
                 pspManager->setTransport(m.getArgAsString(1));
             }
@@ -77,7 +77,7 @@ void MainContentComponent::render(){
     
     jassert (OpenGLHelpers::isContextActive());
     //OpenGLHelpers::clear(Colour::greyLevel(0.9));
-    OpenGLHelpers::clear(Colour::fromFloatRGBA(0.95, 0.95, 0.95, 0.1));
+    OpenGLHelpers::clear(Colour::fromFloatRGBA(0.95, 0.95, 0.95, 0.8));
 
     desktopScale = (float) openGLContext.getRenderingScale();
     glBlendFunc (GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -117,12 +117,61 @@ void MainContentComponent::render(){
 void MainContentComponent::paint (Graphics& g){
     // You can add your component specific drawing code here!
     // This will draw over the top of the openGL background.
+    
+    
 }
 
 bool MainContentComponent::keyPressed(const KeyPress &key){
     pspManager->keyPressed(key);
     return true;
 }
+
+void MainContentComponent::mouseDrag(const juce::MouseEvent &event){
+    if(event.mods.isLeftButtonDown()){
+        if(event.mods.isCommandDown()){
+            double dist, dx, dy;
+            dx = pMouseX - event.getPosition().x;
+            dy = pMouseY - event.getPosition().y;
+            if(abs(dx) > abs(dy)){
+                dist = dx/(double)getWidth();
+            }
+            else{
+                dist = dy/(double)getHeight();
+            }
+            
+            double z;
+            z = zoomSlider->getValue() + 10.*dist;
+            pMouseX = event.getPosition().x;
+            pMouseY = event.getPosition().y;
+            zoomSlider->setValue(z);
+            
+        }
+        double pitch = pitchSlider->getValue() - 180.0*(double)(pMouseX - event.getPosition().x)/(double)getWidth();
+        pMouseX = event.getPosition().x;
+        pitchSlider->setValue(pitch);
+        
+        
+        double roll = rollSlider->getValue() - 180.0*(double)(pMouseY - event.getPosition().y)/(double)getHeight();
+        pMouseY = event.getPosition().y;
+        rollSlider->setValue(roll);
+        
+        
+        return;
+    }
+    //cout<<endl<<"drag";
+}
+
+void MainContentComponent::mouseMove(const juce::MouseEvent &event){
+    pMouseX = event.getPosition().x;
+    pMouseY = event.getPosition().y;
+}
+
+void MainContentComponent::mouseWheelMove (const MouseEvent &event, const MouseWheelDetails &wheel){
+    double zoom;
+    zoom = zoomSlider->getValue() + 5.*wheel.deltaY;
+    zoomSlider->setValue(zoom);
+}
+
 
 
 void MainContentComponent::resized(){
@@ -322,7 +371,7 @@ void MainContentComponent::createViewWidgets(){
     addAndMakeVisible(zoomSlider);
     
     rollSlider = new Slider();
-    rollSlider->setRange(0., 360.);
+    rollSlider->setRange(-360., 360.);
     rollSlider->setValue(0.);
     rollSlider->setPopupMenuEnabled (true);
     rollSlider->setSliderStyle (Slider::LinearBar);
@@ -333,7 +382,7 @@ void MainContentComponent::createViewWidgets(){
     addAndMakeVisible(rollSlider);
     
     pitchSlider = new Slider();
-    pitchSlider->setRange(0., 360.);
+    pitchSlider->setRange(-360., 360.);
     pitchSlider->setValue(0.);
     pitchSlider->setPopupMenuEnabled (true);
     pitchSlider->setSliderStyle (Slider::LinearBar);

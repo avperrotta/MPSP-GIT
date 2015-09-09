@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 218.0, 79.0, 1425.0, 780.0 ],
+		"rect" : [ 228.0, 200.0, 1425.0, 780.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,46 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 900.0, 697.0, 91.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend /mpsp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 900.0, 664.0, 199.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend trajectoryInterpolationTime"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-8",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 900.0, 631.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
@@ -1479,11 +1519,30 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-38", 1 ],
 					"disabled" : 0,
 					"hidden" : 1,
 					"midpoints" : [ 1132.5, 69.5, 939.5, 69.5 ],
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 1,
+					"midpoints" : [ 909.5, 729.0, 1299.0, 729.0, 1299.0, 639.0, 1323.5, 639.0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -1535,6 +1594,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 1,
@@ -1544,24 +1612,24 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5::obj-1::obj-69" : [ "live.gain~[13]", "live.gain~[1]", 0 ],
-			"obj-5::obj-7::obj-69" : [ "live.gain~[4]", "live.gain~[1]", 0 ],
-			"obj-5::obj-16::obj-69" : [ "live.gain~[8]", "live.gain~[1]", 0 ],
-			"obj-5::obj-12::obj-69" : [ "live.gain~[12]", "live.gain~[1]", 0 ],
-			"obj-5::obj-6::obj-69" : [ "live.gain~[3]", "live.gain~[1]", 0 ],
-			"obj-5::obj-14::obj-69" : [ "live.gain~[10]", "live.gain~[1]", 0 ],
-			"obj-10::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-5::obj-3::obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
-			"obj-10::obj-85" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-5::obj-5::obj-69" : [ "live.gain~[2]", "live.gain~[1]", 0 ],
-			"obj-5::obj-15::obj-69" : [ "live.gain~[9]", "live.gain~[1]", 0 ],
-			"obj-5::obj-11::obj-69" : [ "live.gain~[14]", "live.gain~[1]", 0 ],
-			"obj-5::obj-10::obj-69" : [ "live.gain~[16]", "live.gain~[1]", 0 ],
-			"obj-5::obj-9::obj-69" : [ "live.gain~[6]", "live.gain~[1]", 0 ],
-			"obj-5::obj-4::obj-69" : [ "live.gain~[15]", "live.gain~[1]", 0 ],
+			"obj-5::obj-13::obj-69" : [ "live.gain~[11]", "live.gain~[1]", 0 ],
+			"obj-5::obj-9::obj-69" : [ "live.gain~[17]", "live.gain~[1]", 0 ],
+			"obj-5::obj-6::obj-69" : [ "live.gain~[20]", "live.gain~[1]", 0 ],
 			"obj-5::obj-2::obj-69" : [ "live.gain~[7]", "live.gain~[1]", 0 ],
-			"obj-5::obj-8::obj-69" : [ "live.gain~[5]", "live.gain~[1]", 0 ],
-			"obj-5::obj-13::obj-69" : [ "live.gain~[11]", "live.gain~[1]", 0 ]
+			"obj-5::obj-12::obj-69" : [ "live.gain~[12]", "live.gain~[1]", 0 ],
+			"obj-10::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-10::obj-85" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-5::obj-5::obj-69" : [ "live.gain~[21]", "live.gain~[1]", 0 ],
+			"obj-5::obj-15::obj-69" : [ "live.gain~[9]", "live.gain~[1]", 0 ],
+			"obj-5::obj-4::obj-69" : [ "live.gain~[15]", "live.gain~[1]", 0 ],
+			"obj-5::obj-3::obj-69" : [ "live.gain~[1]", "live.gain~[1]", 0 ],
+			"obj-5::obj-16::obj-69" : [ "live.gain~[8]", "live.gain~[1]", 0 ],
+			"obj-5::obj-11::obj-69" : [ "live.gain~[14]", "live.gain~[1]", 0 ],
+			"obj-5::obj-8::obj-69" : [ "live.gain~[18]", "live.gain~[1]", 0 ],
+			"obj-5::obj-14::obj-69" : [ "live.gain~[10]", "live.gain~[1]", 0 ],
+			"obj-5::obj-10::obj-69" : [ "live.gain~[16]", "live.gain~[1]", 0 ],
+			"obj-5::obj-1::obj-69" : [ "live.gain~[13]", "live.gain~[1]", 0 ],
+			"obj-5::obj-7::obj-69" : [ "live.gain~[19]", "live.gain~[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

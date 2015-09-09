@@ -112,6 +112,15 @@ void pspRandomSystem::setBounds(CubeLimits cl){
     bounds->limits_x = cl.limits_x;
     bounds->limits_y = cl.limits_y;
     bounds->limits_z = cl.limits_z;
+    
+//    bounds->limits_x.min *= systemsManager->getConcertRoom()->getBounds()[0];
+//    bounds->limits_x.max *= systemsManager->getConcertRoom()->getBounds()[0];
+//    bounds->limits_y.min *= systemsManager->getConcertRoom()->getBounds()[1];
+//    bounds->limits_y.max *= systemsManager->getConcertRoom()->getBounds()[1];
+//    bounds->limits_z.min *= systemsManager->getConcertRoom()->getBounds()[2];
+//    bounds->limits_z.max *= systemsManager->getConcertRoom()->getBounds()[2];
+    
+    
     lx = bounds->limits_x;
     ly = bounds->limits_y;
     lz = bounds->limits_z;
@@ -139,6 +148,13 @@ void pspRandomSystem::setBounds(int l, double val){
             bounds->limits_z.max = val;
             break;
     }
+    
+    bounds->limits_x.min *= systemsManager->getConcertRoom()->getBounds()[0];
+    bounds->limits_x.max *= systemsManager->getConcertRoom()->getBounds()[0];
+    bounds->limits_y.min *= systemsManager->getConcertRoom()->getBounds()[1];
+    bounds->limits_y.max *= systemsManager->getConcertRoom()->getBounds()[1];
+    bounds->limits_z.min *= systemsManager->getConcertRoom()->getBounds()[2];
+    bounds->limits_z.max *= systemsManager->getConcertRoom()->getBounds()[2];
     
     lx = bounds->limits_x;
     ly = bounds->limits_y;

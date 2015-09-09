@@ -122,7 +122,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1021.0, 424.0, 30.0, 30.0 ],
+					"patching_rect" : [ 1030.0, 424.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -135,7 +135,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 938.0, 424.0, 30.0, 30.0 ],
+					"patching_rect" : [ 942.5, 424.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -146,9 +146,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 0,
-					"patching_rect" : [ 855.0, 478.0, 185.0, 22.0 ],
+					"patching_rect" : [ 855.0, 478.0, 194.0, 22.0 ],
 					"style" : "",
-					"text" : "mpspTrajectoryParser mpsp 2 50"
+					"text" : "mpspTrajectoryParser mpsp 2 100"
 				}
 
 			}
@@ -1324,7 +1324,7 @@
 						"basictuning" : 440,
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
-						"loopend" : [ 1036.099731, "ms" ],
+						"loopend" : [ 5051.813965, "ms" ],
 						"loopstart" : [ 0.0, "ms" ],
 						"mode" : "basic",
 						"originallength" : [ 0.0, "ticks" ],

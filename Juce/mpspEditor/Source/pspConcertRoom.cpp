@@ -293,17 +293,27 @@ void pspConcertRoom::draw(){
         (*speakers)[i]->draw();
     }
     
-    
     glLineWidth(1.);
     glPushMatrix();
-    glColor4f(0.5, 0.5, 0.5, 0.3);
-    glBegin(GL_QUADS);
-    glVertex3f(-2.*roomBounds[0], -0.5*roomBounds[1], 2.*roomBounds[2]);
-    glVertex3f(2.*roomBounds[0], -0.5*roomBounds[1], 2.*roomBounds[2]);
-    glVertex3f(2.*roomBounds[0], -0.5*roomBounds[1], -2.*roomBounds[2]);
-    glVertex3f(-2.*roomBounds[0], -0.5*roomBounds[1], -2.*roomBounds[2]);
+    glColor4f(0.7, 0.7, 0.7, 0.8);
+    glBegin(GL_LINES);
+    for (GLfloat i = -2.5; i <= 2.5; i += 0.25) {
+        glVertex3f(i, -0.5*roomBounds[1] - 0.01, 2.5); glVertex3f(i, -0.5*roomBounds[1] - 0.01, -2.5);
+        glVertex3f(2.5, -0.5*roomBounds[1] - 0.01, i); glVertex3f(-2.5, -0.5*roomBounds[1] - 0.01, i);
+    }
     glEnd();
     glPopMatrix();
+    
+//    glLineWidth(1.);
+//    glPushMatrix();
+//    glColor4f(0.7, 0.7, 0.7, 1.);
+//    glBegin(GL_QUADS);
+//    glVertex3f(-2.*roomBounds[0], -0.5*roomBounds[1] - 0.001, 2.*roomBounds[2]);
+//    glVertex3f(2.*roomBounds[0], -0.5*roomBounds[1] - 0.001, 2.*roomBounds[2]);
+//    glVertex3f(2.*roomBounds[0], -0.5*roomBounds[1] - 0.001, -2.*roomBounds[2]);
+//    glVertex3f(-2.*roomBounds[0], -0.5*roomBounds[1] - 0.001, -2.*roomBounds[2]);
+//    glEnd();
+//    glPopMatrix();
     
     glPushMatrix();
     glLineWidth(1.5);
